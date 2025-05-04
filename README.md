@@ -131,7 +131,38 @@ echo "test@example.com" | python main.py stdin
 python main.py file large_list.txt -w 20 -o results.json -f json
 ```
 
+## 🔍 Validation Levels
 
+The tool performs validation at multiple levels:
+
+1. **Format Validation**
+   - Checks if the email follows standard format (user@domain.tld)
+   - Uses regex pattern for comprehensive format checking
+
+2. **MX Record Check**
+   - Verifies that the domain has mail exchange servers
+   - Indicates the domain can receive emails
+
+3. **Domain Existence**
+   - Checks if the domain name resolves to an IP address
+   - Confirms the domain is active
+
+Results are categorized as:
+- **VALID**: Format correct, MX records exist, domain resolves
+- **DOUBTFUL**: Format correct, but MX or domain check failed
+- **INVALID**: Format is incorrect
+
+## 💡 Tips
+
+- Use the `--no-mx` and `--no-domain` flags for faster validation when only format checking is needed
+- For large lists, adjust the number of workers (-w) based on your system's capabilities
+- The extract command is useful for cleaning up messy contact lists
+- Results can be piped to other tools for further processing
+- Consider rate limiting when validating very large lists to avoid potential IP blocks
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 
 
