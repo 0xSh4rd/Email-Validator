@@ -18,3 +18,26 @@ A command-line tool for validating email addresses with format checking, MX reco
 - Python 3.6 or higher
 - dnspython library
 
+## 🚀 Installation
+
+1. Clone this repository:
+```bash
+git clone https://github.com/0xSh4rd/email-validator.git
+cd email-validator
+```
+
+2. Install requirements:
+```bash
+pip install -r requirements.txt
+```
+
+3. Make the script executable (Unix/Linux/macOS):
+```bash
+chmod +x main.py
+```
+
+## 🔍 Usage
+
+```bash
+python main.py <command> [options]
+```
