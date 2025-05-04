@@ -41,3 +41,11 @@ chmod +x main.py
 ```bash
 python main.py <command> [options]
 ```
+
+## ⚙️ Commands
+
+- `validate`: Validate a single email address
+- `file`: Validate emails from a file
+- `extract`: Extract emails from a text file
+- `stdin`: Validate emails from standard input
+
